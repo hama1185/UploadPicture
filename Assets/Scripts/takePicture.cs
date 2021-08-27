@@ -6,10 +6,13 @@ using System.IO;
 
 public class takePicture : MonoBehaviour
 {
+    public bool onceFlag = false;
     public RenderTexture CamTex;
+    UploadS3 uploadS3;
     void Start()
     {
-        
+        onceFlag = false;
+        uploadS3 = GetComponent<UploadS3>();
     }
 
     void Update()
@@ -25,6 +28,11 @@ public class takePicture : MonoBehaviour
         tex.Apply();
 
         byte[] bytes = tex.EncodeToPNG();
-        File.WriteAllBytes("CameraView.png", bytes);
+        // OSによって変える
+        File.WriteAllBytes(Application.dataPath + "/CameraView.png", bytes);
+        if(!onceFlag){
+            uploadS3.upload();
+            onceFlag = true;
+        }        
     }
 }

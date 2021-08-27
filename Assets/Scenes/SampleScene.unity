@@ -686,6 +686,7 @@ GameObject:
   - component: {fileID: 1790213557}
   - component: {fileID: 1790213556}
   - component: {fileID: 1790213558}
+  - component: {fileID: 1790213559}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -732,7 +733,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbac74143abbd28489a41a88b618a294, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onceFlag: 0
   CamTex: {fileID: 8400000, guid: 9dca9f30cfa79bc438234846c56413e9, type: 2}
+--- !u!114 &1790213559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790213555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2833666dd5b24c74da2018c06667ff90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bucketName: hamatest
 --- !u!1 &1804300457
 GameObject:
   m_ObjectHideFlags: 0
